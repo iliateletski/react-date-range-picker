@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"target": "ES5",
+		"moduleResolution": "Node",
+		"lib": ["ES2015", "DOM"],
+		"sourceMap": true,
+		"outDir": "./build/",
+		"esModuleInterop": true,
+		"strict": true,
+		"declaration": true,
+		"jsx": "react-jsx",
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "build"],
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
