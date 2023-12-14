@@ -15,7 +15,14 @@
 		"noFallthroughCasesInSwitch": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": true,
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "src",
+		"paths": {
+			"components": ["components/*"],
+			"helpers": ["helpers/*"],
+			"types": ["types/*"],
+			
+		}
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "build"],
