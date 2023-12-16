@@ -1,12 +1,7 @@
-import { createDate } from './createDate'
 import { getMonthsNames } from './getMonthsNames'
 import { SelectList } from 'types/types'
 
-export const createSelectList = (
-	startDate: Date,
-	endDate: Date,
-	locale = 'default'
-): SelectList => {
+export const createSelectList = (startDate: Date, endDate: Date, locale = 'default'): SelectList => {
 	let sDate = startDate
 	let eDate = endDate
 

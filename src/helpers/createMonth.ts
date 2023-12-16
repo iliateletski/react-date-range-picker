@@ -15,13 +15,9 @@ export const createMonth = (params?: CreateMonthParams) => {
 	const date = createDate({ date: d, locale })
 	const { monthIndex, monthNumber, monthNameLong, monthNameShort, year } = date
 
-	const getDay = (dayNumber: number) =>
-		createDate({ date: new Date(year, monthIndex, dayNumber), locale })
+	const getDay = (dayNumber: number) => createDate({ date: new Date(year, monthIndex, dayNumber), locale })
 
-	const createDaysInMonth = (
-		minDate: IDay | undefined,
-		maxDate: IDay | undefined
-	) => {
+	const createDaysInMonth = (minDate: IDay | undefined, maxDate: IDay | undefined) => {
 		const month = []
 
 		for (let i = 0; i < numberOfDaysMonth(monthIndex, year); i++) {
@@ -29,8 +25,7 @@ export const createMonth = (params?: CreateMonthParams) => {
 			month[i] = {
 				...date,
 				disabled:
-					isBefore(date.yyyyMmDdKey, minDate?.yyyyMmDdKey) ||
-					isAfter(date.yyyyMmDdKey, maxDate?.yyyyMmDdKey)
+					isBefore(date.yyyyMmDdKey, minDate?.yyyyMmDdKey) || isAfter(date.yyyyMmDdKey, maxDate?.yyyyMmDdKey)
 			}
 		}
 		return month

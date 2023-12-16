@@ -1,0 +1,39 @@
+.month {
+	width: 364px;
+	padding: 0 28px;
+	min-height: 315px;
+	@media (max-width: 930px) {
+		width: 100%;
+		padding: 20px 20px;
+		background-color: #fff;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	}
+}
+
+.monthName {
+	color: #0c73fe;
+	text-align: left;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	padding-left: 12px;
+}
+
+.weekDays {
+	color: #9ea9b7;
+	display: flex;
+	font-weight: 400;
+}
+
+.weekDay {
+	padding-bottom: 10px;
+	flex: 1 1 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.monthDays {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}

@@ -1,4 +1,3 @@
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import { Configuration } from 'webpack'
@@ -10,10 +9,7 @@ export const buildPlugins = (options: BuildOptions): Configuration['plugins'] =>
 		extensions: ['js', 'ts', 'tsx']
 	}
 
-	const plugins: Configuration['plugins'] = [
-		new MiniCssExtractPlugin(),
-		new ESLintPlugin(eslintOptions)
-	]
+	const plugins: Configuration['plugins'] = [new MiniCssExtractPlugin(), new ESLintPlugin(eslintOptions)]
 
 	return plugins
 }

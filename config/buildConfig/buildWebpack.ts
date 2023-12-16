@@ -26,5 +26,3 @@ export const buildWebpack = (option: BuildOptions): webpack.Configuration => {
 		devtool: isDev ? 'inline-source-map' : undefined
 	}
 }
-
-

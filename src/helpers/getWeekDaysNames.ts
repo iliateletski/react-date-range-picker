@@ -6,10 +6,7 @@ interface GetWeekDaysNamesParams {
 	locale?: string
 }
 
-export const getWeekDaysNames = ({
-	firstWeekDayIndex = 0,
-	locale = 'default'
-}: GetWeekDaysNamesParams) => {
+export const getWeekDaysNames = ({ firstWeekDayIndex = 0, locale = 'default' }: GetWeekDaysNamesParams) => {
 	const daysNames: {
 		weekDayNameLong: string
 		weekDayNameShort: string
@@ -25,8 +22,5 @@ export const getWeekDaysNames = ({
 
 		daysNames[weekDayIndex] = { weekDayNameLong, weekDayNameShort }
 	})
-	return [
-		...daysNames.slice(firstWeekDayIndex),
-		...daysNames.slice(0, firstWeekDayIndex)
-	]
+	return [...daysNames.slice(firstWeekDayIndex), ...daysNames.slice(0, firstWeekDayIndex)]
 }

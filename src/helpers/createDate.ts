@@ -17,12 +17,8 @@ export const createDate = (params?: CreateDateParams): IDay => {
 		monthNumber: d.getMonth() + 1,
 		monthNameLong: d.toLocaleDateString(locale, { month: 'long' }),
 		monthNameShort: d.toLocaleDateString(locale, { month: 'short' }),
-		yyyyMmDdKey: new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()))
-			.toISOString()
-			.slice(0, 10),
-		yyyyMMKey: new Date(Date.UTC(d.getFullYear(), d.getMonth()))
-			.toISOString()
-			.slice(0, 7),
+		yyyyMmDdKey: new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().slice(0, 10),
+		yyyyMMKey: new Date(Date.UTC(d.getFullYear(), d.getMonth())).toISOString().slice(0, 7),
 		weekDayIndex: d.getDay(),
 		weekDayNumber: d.getDay() + 1,
 		weekDayNameLong: d.toLocaleDateString(locale, { weekday: 'long' }),

@@ -1,0 +1,59 @@
+.selectDate {
+	position: relative;
+	width: max-content;
+	padding: 4px 30px;
+	font-size: 20px;
+	text-transform: capitalize;
+	color: #0c73fe;
+	display: flex;
+	align-items: center;
+	@media (max-width: 930px) {
+		font-size: 18px;
+	}
+}
+
+.customSelect {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 4px;
+}
+
+.select {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: capitalize;
+	color: #0c73fe;
+	border: none;
+	background-color: transparent;
+	user-select: none;
+	outline: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	cursor: pointer;
+
+	& option:disabled {
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&:focus-visible + .customSelect {
+		box-shadow: 0 0 3px 2px #0f5de466;
+	}
+}
+
+.selectIcon {
+	width: 20px;
+	height: 20px;
+	transform: rotate(90deg);
+	margin-left: 5px;
+	fill: currentColor;
+	stroke: currentColor;
+	stroke-width: 1.5;
+}

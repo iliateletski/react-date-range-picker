@@ -12,7 +12,7 @@ export default (env: EnvVariables) => {
 	const isDev = env.mode === 'development'
 
 	const paths: BuildPaths = {
-		entry: path.resolve(__dirname, 'src', 'index.tsx'),
+		entry: path.resolve(__dirname, 'src', 'index.ts'),
 		output: path.resolve(__dirname, 'build')
 	}
 

@@ -18,10 +18,10 @@
 		"allowSyntheticDefaultImports": true,
 		"baseUrl": "src",
 		"paths": {
-			"components": ["components/*"],
-			"helpers": ["helpers/*"],
-			"types": ["types/*"],
-			
+			"components/*": ["components/*"],
+			"helpers/*": ["helpers/*"],
+			"types/*": ["types/*"],
+			"hooks/*": ["hooks/*"]
 		}
 	},
 	"include": ["src"],

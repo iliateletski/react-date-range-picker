@@ -20,16 +20,14 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint", "react", "prettier"],
+	"plugins": ["@typescript-eslint", "react", "prettier", "import"],
 	"rules": {
 		"no-console": "warn",
 		"prettier/prettier": "error"
 	},
 	"settings": {
 		"import/resolver": {
-			"node": {
-				"extensions": [".js", ".jsx", ".ts", ".tsx"]
-			}
+			"typescript": {}
 		}
 	}
 }
